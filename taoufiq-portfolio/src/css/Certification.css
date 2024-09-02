@@ -1,0 +1,81 @@
+.certification-container {
+    max-width: 100%;
+    margin: 0 auto;
+    color: white;
+    padding-bottom: 10px;
+}
+
+.certification-title {
+    text-align: left;
+    font-size: 2.5rem;
+    color: #f39c12;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.certification-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #f39c12;
+    margin-top: 10px;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+}
+
+.certification-timeline {
+    position: relative;
+    padding-left: 40px;
+    border-left: 3px solid #f39c12;
+}
+
+.certification-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    margin-bottom: 40px;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 0.8s forwards;
+    position: relative;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.certification-card:hover {
+    transform: translateY(0);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.certification-card::before {
+    content: '';
+    position: absolute;
+    left: -11px;
+    top: 20px;
+    width: 22px;
+    height: 22px;
+    background: #f39c12;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px #1c1c1c;
+}
+
+.certification-title, .certification-awarded-by, .certification-date,
+.certification-awarded-to, .certification-id, .certification-description,
+.certification-signatories {
+    margin: 10px 0;
+    color: #ddd;
+}
+
+.certification-title {
+    font-size: 1.7rem;
+    color: #f39c12;
+}
+
+@keyframes fadeInUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
